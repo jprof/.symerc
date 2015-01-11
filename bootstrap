@@ -1,1 +1,16 @@
 #! /bin/bash
+
+cd $(dirname $0)
+
+ln -s vim ~/.vim/
+ln -s vimrc ~/.vimrc
+
+cd ~/.vim
+git submodule update --init
+
+cd ~
+
+sudo apt-get install -y curl tree unzip zip
+
+sudo wget -q0 /usr/local/bin/lein https://raw.github.com/technomancy/leiningen/stable/bin/lein
+

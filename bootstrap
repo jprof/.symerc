@@ -5,6 +5,8 @@ cd $(dirname $0)
 # Vim setup
 ln -s vim ~/.vim/
 ln -s vimrc ~/.vimrc
+ln -s tmux.conf ~/.tmux.conf
+ln -s gitconfig ~/.gitconfig
 
 cd ~/.vim
 git submodule update --init

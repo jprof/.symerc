@@ -2,11 +2,13 @@
 
 cd $(dirname $0)
 
+# Vim setup
 ln -s vim ~/.vim/
 ln -s vimrc ~/.vimrc
 
 cd ~/.vim
 git submodule update --init
+vim +PluginInstall +qall
 
 cd ~
 

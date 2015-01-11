@@ -1,15 +1,15 @@
 #! /bin/bash
 
 cd $(dirname $0)
+git submodule update --init
 
 # Vim setup
-ln -s $PWD/vim ~/.vim/
+ln -s $PWD/vim ~/.vim
 ln -s $PWD/vimrc ~/.vimrc
 ln -s $PWD/tmux.conf ~/.tmux.conf
 ln -s $PWD/gitconfig ~/.gitconfig
 
 cd ~/.vim
-git submodule update --init
 vim +PluginInstall +qall
 
 cd ~
